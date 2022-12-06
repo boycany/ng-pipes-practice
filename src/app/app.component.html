@@ -71,12 +71,14 @@
         <label><b>Meters</b></label>
         <div>{{ miles | convert: 'm' : 3 }}</div>
       </div>
+      <!-- cusome pipe 用在 ngIf -->
       <div>
         <label><b>Kilometers</b></label>
         <div *ngIf="(miles | convert: 'km') > 10">
           {{ miles | convert: 'km' : 4 }}
         </div>
       </div>
+      <!-- 單純用 ngIf 下判斷式 -->
       <div>
         <label><b>Test</b></label>
         <div *ngIf="miles && miles > 5">{{ miles | convert: 'cm' : 2 }}</div>
