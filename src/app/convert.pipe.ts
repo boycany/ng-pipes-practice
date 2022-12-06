@@ -41,6 +41,5 @@ export class ConvertPipe implements PipeTransform {
       }
     }
     return value;
-    // }
   }
 }
